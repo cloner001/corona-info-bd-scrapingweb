@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Corona Status</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<style>
+
+    .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+</style>
+</head>
+
+<body>
+<div class="text-center p-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <ul class="nav navbar-nav navbar-center">
+    <h2>Corona Status Of Bangladesh</h2>
+    </ul>
+</nav>
+</div>
+
+<div class="text-center my-5">
+<button type="button" class="btn btn-danger my-45" onclick="myFunction()"> Corona Information </button>
+</div>
+<div id="myDIV">
+    <center>
+    <h3>New Infected(24 Hours): {{N}}</h3>
+    <h3>Total Infected        : {{Nt}}</h3>
+    <h3>Cure(24 Hours)        : {{C}}</h3>
+    <h3>Total Cure            : {{Ct}}</h3>
+    <h3>Death(24 Hours)       : {{D}}</h3>
+    <h3>Total Death           : {{Dt}}</h3>
+    <h3>Test(24 Hours)        : {{T}}</h3>
+    <h3>Total Test            : {{Tt}}</h3>
+    <h3>{{latest}}</h3>
+    <h1>The Percentage of infected people(24 hours) is {{P}} %</h1>
+    </center>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
